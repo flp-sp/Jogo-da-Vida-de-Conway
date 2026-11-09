@@ -1,10 +1,12 @@
 #include "../conway/universe.h"
 #include "../conway/cell.h"
 
+Universe universe;
 
-Cell positions[] = {{7,6}, {8,7}, {6,8}, {7,8}, {8,8}};
-
-Universe universe = {positions, 5};
+void createSeed(Cell* positions){
+    universe.liveCells = positions;
+    universe.count = 5;
+}
 
 int checkCellPosition(long posX, long posY){
     for(int i = 0; i < universe.count; i++){
