@@ -2,6 +2,7 @@
 #define CELL_H
 
 typedef struct Cell{
+    int status;
     long posX;
     long posY;
 } Cell;

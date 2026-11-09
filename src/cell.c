@@ -2,7 +2,7 @@
 #include "../conway/universe.h"
 
 Cell initCell(long posX, long posY){
-    Cell newCell = {posX, posY};
+    Cell newCell = {1, posX, posY};
     return newCell;
 }
 
@@ -25,7 +25,7 @@ int countNeighbours(Cell *cell){
     if(checkCellPosition(cell->posX, cell->posY - 1)){
         totalNeighbours++;
     }
-    
+
     //diagonal
     if(checkCellPosition(cell->posX + 1, cell->posY + 1)){
         totalNeighbours++;

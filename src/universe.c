@@ -16,3 +16,18 @@ int checkCellPosition(long posX, long posY){
     }
     return 0;
 }
+
+void removeCell(Cell cell){
+    long posX = cell.posX;
+    long posY = cell.posY;
+    for(int i = 0; i < universe.count; i++){
+        if(universe.liveCells[i].posX == posX && universe.liveCells[i].posY == posY){
+            universe.liveCells[i].status = 0;
+        }
+    }
+}
+
+void addCell(Cell cell){    
+    universe.count++;
+    universe.liveCells[universe.count] = cell;
+}

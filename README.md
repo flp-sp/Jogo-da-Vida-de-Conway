@@ -8,7 +8,7 @@ O jogo funciona em uma grade cartesiana de dois eixos, onde existem células que
 As regras do jogo seguem a seguinte ordem:
 1. Qualquer célula com menos de duas vizinhas morre por subpopulação.
 2. Qualquer célula com duas ou três vizinhas vivem para a próxima geração.
-3. Qualquer célula com mais de três visinhos morre por sobrepopulação.
+3. Qualquer célula com mais de três vizinhos morre por sobrepopulação.
 4. Qualquer célula morta vira uma célula viva se tiver exatamente três vizinhos vivos ao seu redor, como se fosse reprodução.
 
 ## Stack
