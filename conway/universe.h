@@ -9,8 +9,16 @@ typedef struct Universe{
 
 } Universe;
 
+Universe universe;
+
 void createSeed(Cell* positions);
 
-int checkCellPosition(long posX, long posY);
+int checkLiveCellPosition(long posX, long posY);
+
+int checkAllCells(long posX, long posY);
+
+void removeCell(Cell cell);
+
+void addCell(Cell cell);
 
 #endif

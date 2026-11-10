@@ -3,7 +3,8 @@
 
 #include "../conway/cell.h"
 
-void killCell(Cell cell);
-void bornCell(Cell cell);
+void killCell();
+void bornCell();
+void initNeighbours();
 
 #endif

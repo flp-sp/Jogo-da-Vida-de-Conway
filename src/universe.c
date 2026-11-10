@@ -8,9 +8,20 @@ void createSeed(Cell* positions){
     universe.count = 5;
 }
 
-int checkCellPosition(long posX, long posY){
+int checkLiveCellPosition(long posX, long posY){
     for(int i = 0; i < universe.count; i++){
-        if(universe.liveCells[i].posX == posX && universe.liveCells[i].posY == posY){
+        Cell currentCell = universe.liveCells[i];
+        if(currentCell.status == 1 && (currentCell.posX == posX && currentCell.posY == posY)){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int checkAllCells(long posX, long posY){
+    for(int i = 0; i < universe.count; i++){
+        Cell currentCell = universe.liveCells[i];
+        if(currentCell.posX == posX && currentCell.posY == posY){
             return 1;
         }
     }
